@@ -1,0 +1,45 @@
+/* TODO: You should clear this css and make it your own (this is not a boostrap css, just a css
+ *       to support the quickstart index page.  
+ * 
+ * NOTE: For advanced application, we recommend going with Twitter Bootstrap and lesscss (Snow has 
+ * builtin it support for less)
+ */
+
+ul{
+  padding-left: 5px;
+}
+ul ol{
+  padding-left: 5px;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+
+em{
+  font-family: monospace;
+  color: #5588bb;
+}
+
+a.top-left{
+  position: absolute;
+  top: 5px; left: 5px;
+}
+/* --------- login form --------- */
+#loginform{
+  width: 600px;
+  margin: 100px auto 0 auto;
+}
+
+/* --------- index page specifics --------- */
+#indexPage{
+  margin: 10px;
+}
+#indexPage h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#indexPage h2{
+  font-size: 20px;
+}
+/* --------- /index page specifics --------- */
