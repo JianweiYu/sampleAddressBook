@@ -1,0 +1,11 @@
+.GroupModelView .modal {
+  width: 360px;
+}
+.GroupModelView .modal .control-label {
+  display: inline-block;
+}
+.GroupModelView .modal input {
+  display: inline-block;
+  margin-left: 20px;
+}
+

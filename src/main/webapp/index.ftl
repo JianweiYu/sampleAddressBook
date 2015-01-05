@@ -19,6 +19,8 @@
       single element.</li>      
     <li><a href="${_r.contextPath}/contact?id=1">/contact?id='1'</a> is an example of a page based approach to display some entity info.</li>
 
+    <li><a href="${_r.contextPath}/AddressBook">/AddressBook</a>Address Book Practice</li>
+
   </ul>
   
 </div>

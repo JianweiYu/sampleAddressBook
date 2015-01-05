@@ -1,0 +1,31 @@
+<script id="UserModelView" type="text/html">
+<div class="UserModelView">
+	<div class="modal">
+		<div class="modal-dialog">
+			<div class= modal-content">
+				<div class="modal-header">
+					<div class="modal-title">Add User</div>
+				</div>
+				<div class="modal-body">
+			    	<div class="form-group">
+        				<label class="control-label">UserName:</label>
+        				<input class="form-control name" type="text" value={{name}}>
+        			</div>
+                    <div class="form-group">
+        				<label class="control-label">address:</label>
+        				<input class="form-control address" type="text" value={{address}}>
+        			</div>
+                    <div class="form-group">
+        				<label class="control-label">telephone:</label>
+        				<input class="form-control tel" type="text" value={{tel}}>
+        			</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default cancel">Cancel</button>
+					<button type="button" class="btn btn-primary create">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</script>

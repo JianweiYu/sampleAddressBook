@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/sampleContacts/WEB-INF/lib/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/sampleContacts/WEB-INF/lib/commons-beanutils-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/sampleContacts/WEB-INF/lib/rhino-1.7R3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/sampleContacts/WEB-INF/lib/snow-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/sampleContacts/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

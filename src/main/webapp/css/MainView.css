@@ -1,0 +1,84 @@
+.MainView {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.MainView .MainView-topNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  color: #FFF;
+  background-color: #57FFE7;
+}
+.MainView .MainView-topNav .btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.MainView .MainView-content {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #93E887;
+}
+.MainView .MainView-content .group-ctn .group-title {
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #FFF;
+  clear: both;
+}
+.MainView .MainView-content .group-ctn .group-title .add-user {
+  float: right;
+  margin-right: 10px;
+  color: #80B3FF;
+}
+.MainView .MainView-content .group-ctn .group-title .delete-group {
+  float: right;
+  margin-right: 10px;
+  color: #F28379;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info,
+.MainView .MainView-content .group-ctn .user-info-title {
+  text-align: center;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info .info,
+.MainView .MainView-content .group-ctn .user-info-title .info {
+  float: left;
+  border-bottom: 1px #FFF solid;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info .userId,
+.MainView .MainView-content .group-ctn .user-info-title .userId {
+  width: 5%;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info .username,
+.MainView .MainView-content .group-ctn .user-info-title .username {
+  width: 21%;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info .address,
+.MainView .MainView-content .group-ctn .user-info-title .address {
+  width: 39%;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info .tel,
+.MainView .MainView-content .group-ctn .user-info-title .tel {
+  width: 30%;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info .delete-user,
+.MainView .MainView-content .group-ctn .user-info-title .delete-user {
+  width: 5%;
+  color: #F28379;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info .delete,
+.MainView .MainView-content .group-ctn .user-info-title .delete {
+  width: 5%;
+}
+.MainView .MainView-content .group-ctn .address-box .user-info-title {
+  color: #F23C13;
+}
+

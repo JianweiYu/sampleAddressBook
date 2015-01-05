@@ -1,0 +1,13 @@
+.UserModelView .modal {
+  width: 360px;
+}
+.UserModelView .modal .control-label {
+  width: 80px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.UserModelView .modal input {
+  display: inline-block;
+  margin-left: 20px;
+}
+
