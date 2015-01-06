@@ -20,7 +20,7 @@ Handlebars.templates['group-items'] = Handlebars.template({"compiler":[6,">= 2.0
     + escapeExpression(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"id","hash":{},"data":data}) : helper)))
     + ">\n  <div class=\"group-title\">"
     + escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"title","hash":{},"data":data}) : helper)))
-    + "\n    <a class=\"delete-group\">\n      Delete\n    </a>\n    <a class=\"add-user\">\n      Add User\n    </a>\n  </div>\n  <div class=\"address-box\">\n    <div class=\"user-info-title\">\n      <div class=\"userId info\">Id</div>\n      <div class=\"username info\">username</div>\n      <div class=\"address info\">address</div>\n      <div class=\"tel info\">telephone</div>\n      <div class=\"delete info\">delete</div>\n    </div>\n    <div class=\"user-info-ctn\">\n\n    </div>\n  </div>\n</div>";
+    + "\n    <a class=\"btn btn-danger delete-group\">\n      Delete\n    </a>\n    <a class=\"btn btn-info add-user\">\n      Add User\n    </a>\n  </div>\n  <div class=\"address-box\">\n    <div class=\"user-info-title\">\n      <div class=\"userId info\">Id</div>\n      <div class=\"username info\">username</div>\n      <div class=\"address info\">address</div>\n      <div class=\"tel info\">telephone</div>\n      <div class=\"edit info\">-</div>\n      <div class=\"delete info\">-</div>\n    </div>\n    <div class=\"user-info-ctn\">\n\n    </div>\n  </div>\n</div>";
 },"useData":true}
 );
 
@@ -29,13 +29,13 @@ Handlebars.templates['user-items'] = Handlebars.template({"compiler":[6,">= 2.0.
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
   return "<div class=\"user-info\">\n  <div class=\"userId info\">"
     + escapeExpression(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"id","hash":{},"data":data}) : helper)))
-    + "</div>\n  <a class=\"username info\">"
+    + "</div>\n  <div class=\"username info\">"
     + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
-    + "</a>\n  <div class=\"address info\">"
+    + "</div>\n  <div class=\"address info\">"
     + escapeExpression(((helper = (helper = helpers.address || (depth0 != null ? depth0.address : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"address","hash":{},"data":data}) : helper)))
     + "</div>\n  <div class=\"tel info\">"
     + escapeExpression(((helper = (helper = helpers.tel || (depth0 != null ? depth0.tel : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"tel","hash":{},"data":data}) : helper)))
-    + "</div>\n  <a class=\"delete-user info\">X</a>\n</div>";
+    + "</div>\n  <a class=\"info edit\"><span class=\"edit-user btn btn-info\">Edit</span></a>\n  <a class=\"info delete\"><span class=\"delete-user btn btn-danger\">delete</span></a>\n</div>";
 },"useData":true}
 );
 

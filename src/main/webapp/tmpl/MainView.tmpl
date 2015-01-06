@@ -17,10 +17,10 @@
 <script id="group-items" type="text/html">
 <div class="group-ctn" data-entity="group" data-entity-id={{id}}>
   <div class="group-title">{{title}}
-    <a class="delete-group">
+    <a class="btn btn-danger delete-group">
       Delete
     </a>
-    <a class="add-user">
+    <a class="btn btn-info add-user">
       Add User
     </a>
   </div>
@@ -30,7 +30,8 @@
       <div class="username info">username</div>
       <div class="address info">address</div>
       <div class="tel info">telephone</div>
-      <div class="delete info">delete</div>
+      <div class="edit info">-</div>
+      <div class="delete info">-</div>
     </div>
     <div class="user-info-ctn">
 
@@ -42,9 +43,10 @@
 <script id="user-items" type="text/html">
 <div class="user-info">
   <div class="userId info">{{id}}</div>
-  <a class="username info">{{name}}</a>
+  <div class="username info">{{name}}</div>
   <div class="address info">{{address}}</div>
   <div class="tel info">{{tel}}</div>
-  <a class="delete-user info">X</a>
+  <a class="info edit"><span class="edit-user btn btn-info">Edit</span></a>
+  <a class="info delete"><span class="delete-user btn btn-danger">delete</span></a>
 </div>
 </script>

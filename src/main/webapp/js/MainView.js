@@ -36,7 +36,7 @@
 				refreshInfo.call(view);
 			});
 		},
-		"click; a.username" : function(e){
+		"click; .edit-user" : function(e){
 			var view = this;
 			var info = {};
 			var ctn = $(e.currentTarget).closest(".user-info");
