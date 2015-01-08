@@ -15,8 +15,9 @@
 </script>
 
 <script id="group-items" type="text/html">
+{{# each result}}
 <div class="group-ctn" data-entity="group" data-entity-id={{id}}>
-  <div class="group-title">{{title}}
+  <div class="group-title">{{name}}
     <a class="btn btn-danger delete-group">
       Delete
     </a>
@@ -38,6 +39,7 @@
     </div>
   </div>
 </div>
+{{/each}}
 </script>
 
 <script id="user-items" type="text/html">

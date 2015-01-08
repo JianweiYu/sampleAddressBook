@@ -19,7 +19,7 @@
                 if(groupName == ""){
                     alert("Need to add the name.");
                 }else{
-                    main.groupsDao.create({title:groupName}).done(function(){
+                    app.groupDao.save({name:groupName}).done(function(){
                         view.$el.trigger("DO_REFRESH");
                         view.$el.remove();
                     });

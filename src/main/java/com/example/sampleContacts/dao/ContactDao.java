@@ -1,23 +1,40 @@
 package com.example.sampleContacts.dao;
 
-import java.util.Comparator;
-
+import com.britesnow.snow.web.db.hibernate.HibernateDaoHelper;
 import com.example.sampleContacts.entity.Contact;
+import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
-@Singleton
-public class ContactDao extends BaseDao<Contact> {
+import java.util.List;
 
-    public final static Comparator<Contact> SORT_BY_TITLE = new Comparator<Contact>() {
-        @Override
-        public int compare(Contact o1, Contact o2) {
-            return o1.getLastName().compareTo(o2.getLastName());
-        }
-    };
-    
-    public ContactDao(){
-        defaultSort = SORT_BY_TITLE;
+@Singleton
+public class ContactDao implements DaoInterface<Contact> {
+    @Inject
+    private HibernateDaoHelper daoHelper;
+
+    @Override
+    public Contact save(Contact contact) {
+        return daoHelper.save(contact);
     }
-    
-    
+
+    @Override
+    public Contact get(Integer id) {
+        return daoHelper.get(Contact.class,id);
+    }
+
+    @Override
+    public void delete(int id) {
+        daoHelper.delete(Contact.class,id);
+    }
+
+    @Override
+    public List<Contact> list() {
+        return (List<Contact>) daoHelper.find(0,1000,"from "+Contact.class.getSimpleName());
+    }
+
+    @Override
+    public Contact update(Contact contact) {
+        return daoHelper.update(contact);
+    }
+
 }

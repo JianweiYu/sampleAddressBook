@@ -19,7 +19,7 @@
 			var view = this;
 			var ctn = $(e.currentTarget).closest(".group-ctn");
 			var groupId = ctn.attr("data-entity-id");
-			main.groupsDao.remove(groupId).done(function(){
+			app.groupDao.delete(groupId).done(function(){
 				refreshInfo.call(view);
 			});
 		},
@@ -27,12 +27,12 @@
 			var view = this;
 			var ctn = $(e.currentTarget).closest(".group-ctn");
 			var groupId = ctn.attr("data-entity-id");
-			brite.display("UserModelView","body",{groupId:groupId});
+			brite.display("UserModelView","body",{groupId:groupId,action:"save"});
 		},
 		"click; .delete-user" : function(e){
 			var view = this;
 			var userId = $(e.currentTarget).closest(".user-info").find(".userId").text();
-			main.usersDao.remove(userId).done(function(){
+			app.contactDao.delete(userId).done(function(){
 				refreshInfo.call(view);
 			});
 		},
@@ -44,6 +44,7 @@
 			info.name = ctn.find(".username").text();
 			info.address = ctn.find(".address").text();
 			info.tel = ctn.find(".tel").text();
+			info.groupId = $(e.currentTarget).closest(".group-ctn").attr("data-entity-id");
 			brite.display("UserModelView","body",info);
 		}
 	},
@@ -59,20 +60,19 @@
 	function refreshInfo(){
 		var view = this;
 		view.$content.bEmpty();
-		main.groupsDao.list().done(function(groupList){
-			for(var i=0;i<groupList.length;i++){
-				var html = render("group-items",groupList[i]);
-				view.$content.append(html);
-			}
+		app.groupDao.list().done(function(groupList){
+			var html = render("group-items",groupList);
+			view.$content.append(html);
 		});
 
-		main.usersDao.list().done(function(user){
-			for(var i=0;i<user.length;i++){
+		app.contactDao.list().done(function(user){
+			console.log(user);
+			for(var i=0;i<user.result.length;i++){
 				view.$content.find(".group-ctn").each(function(){
 					var groupId = $(this).attr("data-entity-id");
 					var $userItem = $(this).find(".user-info-ctn");
-					if(groupId == user[i].groupId){
-						var html = render("user-items",user[i]);
+					if(groupId == user.result[i].groupId){
+						var html = render("user-items",user.result[i]);
 						$userItem.append(html);
 					}
 				});
